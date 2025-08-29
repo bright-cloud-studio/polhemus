@@ -1,0 +1,22 @@
+dateModified: 1756477189
+email:
+  fromEmail: aaron@brightcloudstudio.com
+  fromName: Polhemus
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    4583bc03-7d7e-456f-9141-93d8f28c7505: Polhemus # Polhemus
+    5119ef1b-1983-4377-9d66-520931f5f1b3: Polhemus # Polhemus
+system:
+  edition: solo
+  live: true
+  name: Polhemus
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

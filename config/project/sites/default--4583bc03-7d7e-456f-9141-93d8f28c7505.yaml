@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: Polhemus
+primary: true
+siteGroup: 5119ef1b-1983-4377-9d66-520931f5f1b3 # Polhemus
+sortOrder: 1

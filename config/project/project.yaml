@@ -1,12 +1,39 @@
-dateModified: 1756477189
+dateModified: 1756484513
 email:
   fromEmail: aaron@brightcloudstudio.com
   fromName: Polhemus
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0e52d06b-789d-4246-8aa6-125ec020706b: New # New
+    3b510664-e436-4282-b4ac-b6352833f100: Simple # Simple
     4583bc03-7d7e-456f-9141-93d8f28c7505: Polhemus # Polhemus
     5119ef1b-1983-4377-9d66-520931f5f1b3: Polhemus # Polhemus
+    bf629765-9276-45b0-94cc-963234a61e0c: 'Contact Form' # Contact Form
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  elements-panel:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: L5Z1ZVZXR42BYPR9AS6Z1H5G
+    schemaVersion: 3.4.10
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: HRNI5N1FH1EIBULL6KXLZTHN
+    schemaVersion: 2.1.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: D1YHV5ROY05ETSKSIC07B7IS
+    schemaVersion: 3.0.13
 system:
   edition: solo
   live: true

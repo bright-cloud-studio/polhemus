@@ -22,6 +22,13 @@ return GeneralConfig::create()
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
+    ->enableGql(0)
+    
+    ->generateTransformsBeforePageLoad(1)
+    
+    ->cpHeadTags([
+        ['link', ['rel' => 'icon', 'type' => 'image/svg+xml', 'sizes' => 'any', 'href' => '/icons/favicon.svg']],
+    ])
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
     ])

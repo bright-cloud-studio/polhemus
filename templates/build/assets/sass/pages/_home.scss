@@ -1,0 +1,596 @@
+.home {
+	background: #F8F8F8;
+	padding-top: 1.568vw;
+	
+	.hero {
+		width: 100%;
+		overflow: hidden;
+	}
+	
+	.cta {
+		margin-top: 0.52vw;
+		border-top: 1px solid $dkgreen;
+		border-bottom: 1px solid $dkgreen;
+		
+		.ctas {
+			display: flex;
+			padding: 0 2.5vw;
+			
+			.cta {
+				border-right: 1px solid $dkgreen;
+				position: relative;
+				overflow: hidden;
+				width: 25%;
+				
+				&:first-child {
+					border-left: 1px solid $dkgreen;
+				}
+				
+				img {
+					border-radius: 8px;
+					overflow: hidden;
+					padding: 0.68vw 0.83vw;
+					transition: transform .2s linear;
+				}
+				
+				&-title {
+					color: $dkgreen;
+					@extend .oswald-med;
+					font-size: 1.25vw;
+					line-height: 1;
+					text-align: center;
+					text-transform: uppercase;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $yellow;
+					position: absolute;
+					left: 0;
+					bottom: 1.67vw;
+					width: 14.63vw;
+					height: 2.61vw;
+				}
+				
+				&:hover {
+					img {
+						transform: scale(1.15);
+					}
+				}
+			}
+		}
+	}
+	
+	.about {
+		display: flex;
+		
+		.about-lt {
+			border-right: 1px solid $dkgreen;
+			padding: 24.25vw 0 5.96vw;
+			position: relative;
+			width: 36%;
+			
+			.cross-tl {
+				inset: calc(7.48vw + 21px) auto auto calc(2.61vw + 21px);
+			}
+			.cross-tr {
+				inset: calc(7.48vw + 21px) -21px auto auto;
+			}
+			.cross-bl {
+				inset: auto auto 1.77vw calc(2.61vw + 21px);
+			}
+			.cross-br {
+				inset: auto -21px 1.77vw auto;
+			}
+			
+			.about-title {
+				color: $ltgreen;
+				@extend .anta;
+				font-size: 2.5vw;
+				line-height: 1.2;
+				letter-spacing: 0;
+				text-transform: uppercase;
+				border-top: 1px solid $dkgreen;
+				padding: 0.94vw 0.63vw 0.94vw 3.76vw;
+				margin: 0;
+			}
+			
+			.about-copy {
+				border-top: 1px solid $dkgreen;
+				border-bottom: 1px solid $dkgreen;
+				padding: 1.67vw 3.76vw 1.67vw;
+				
+				p {
+					color: $dkgreen;
+					line-height: 1.2
+				}
+			}
+			
+			.about-btn {
+				padding: 0.42vw 0 0 3.76vw;
+			}
+		}
+		.about-rt {
+			display: flex;
+			align-items: center;
+			width: 64%;
+			padding-left: 2.4vw;
+			
+			.slider-wrap {
+				background: $yellow;
+				display: flex;
+				
+				.slider {
+					width: 46.52vw;
+					height: 39.2vw;
+					
+					.slick-list, .slick-track {
+						height: 100%;
+					}
+					
+					.slide {
+						position: relative;
+						
+						img {
+							object-fit: cover;
+							height: 100%;
+						}
+						
+						&-title {
+							color: $white;
+							@extend .oswald-bold;
+							font-size: 2.09vw;
+							line-height: 1.2;
+							position: absolute;
+							top: 1.46vw;
+							left: 1.77vw;
+						}
+					}
+				}
+				
+				.slider-nav {
+					width: 15.26vw;
+					position: relative;
+					
+					.nav-arrows {
+						display: flex;
+						gap: 0.52vw;
+						position: absolute;
+						bottom: 1.04vw;
+						right: 1.04vw;
+						
+						button.slick-arrow {
+							color: transparent;
+							font-size: 0;
+							line-height: 0;
+							background: $ltgreen;
+							width: 2.82vw;
+							height: 2.3vw;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							
+							&:after {
+								color: $white;
+								@extend .inter;
+								font-size: 1.05vw;
+								line-height: 1;
+								display: block;
+							}
+							
+							&.slick-prev {
+								&:after {
+									content: '<';
+								}
+							}
+							
+							&.slick-next {
+								&:after {
+									content: '>';
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.marketing {
+		background: linear-gradient(18deg, #001E0F 18.09%, #014B26 94.69%);
+
+		.marketing-sub-title {
+			border-bottom: 1px solid $yellow;	
+			
+			h2 {
+				color: $white;
+				@extend .anta;
+				font-size: 2.5vw;
+				line-height: 1;
+				text-align: center;
+				text-transform: uppercase;
+				border-left: 1px solid $yellow;
+				border-right: 1px solid $yellow;
+				width: 75vw;
+				margin: 0 auto;
+				padding: 14.11vw 0 0;
+			}
+		}
+		
+		.marketing-title {
+			border-bottom: 1px solid $yellow;	
+			
+			.logo-wrapper {
+				border-left: 1px solid $yellow;
+				border-right: 1px solid $yellow;
+				width: 75vw;
+				margin: 0 auto;
+				position: relative;
+				
+				.logo {
+					background: $white;
+					width: 70.047vw;
+					height: 8.1vw;
+					margin: 0 auto;
+				}
+				
+				.cross-tr {
+					inset: -21px -21px auto auto;
+					z-index: 2;
+				}
+				
+				.cross-bl {
+					margin-left: 0;
+					inset: auto auto -21px -21px;
+					z-index: 2;
+				}
+			}
+		}
+		
+		.marketing-ctas {
+			border-left: 1px solid $yellow;
+			border-right: 1px solid $yellow;
+			width: 75vw;
+			margin: 0 auto;
+			position: relative;
+			
+			p {
+				color: $white;
+				@extend .inter;
+				text-align: center;
+				margin: 0;
+				padding: 1.41vw 0 1.77vw;
+			}
+			
+			.marketing-cta {
+				display: block;
+				width: 89vw;
+				height: 24.78vw;
+				margin: 0 auto 2.09vw -7vw;
+				position: relative;
+				background: #fff;
+				
+				img {
+					object-fit: cover;
+					height: 100%;
+					object-position: center;
+				}
+				
+				.type {
+					color: $dkgreen;
+					@extend .anta;
+					font-size: 2.5vw;
+					line-height: normal;
+					text-align: center;
+					text-transform: uppercase;
+					background: #F8F8F8;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 1.4vw;
+					width: 21.69vw;
+					height: 7.84vw;
+					position: absolute;
+					top: 0;
+					right: auto;
+					left: 7vw;
+				}
+				
+				.more {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 16.7vw;
+					height: 2.4vw;
+					background: $yellow;
+					color: $white;
+					@extend .oswald-bold;
+					font-size: 1.25vw;
+					line-height: 1;
+					font-style: normal;
+					text-align: center;
+					text-transform: uppercase;
+					position: absolute;
+					bottom: 1.46vw;
+					left: auto;
+					right: -0.84vw;
+				}
+				
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+				
+				&:nth-child(even) {
+					.type {
+						left: auto;
+						right: 7vw;
+					}
+					
+					.more {
+						right: auto;
+						left: -0.84vw;
+					}
+				}
+			}
+			
+			.gap {
+				height: 1.77vw;
+			}
+			
+			.cross-tl {
+				margin-left: 0;
+				position: absolute;
+				inset: 33.5% auto auto -21px;
+			}
+			.cross-br {
+				position: absolute;
+				inset: auto -21px -21px auto;
+			}
+		}
+		
+		.cta-wrapper {
+			border-top: 1px solid $white;
+			border-bottom: 1px solid $white;
+			
+			.cta {
+				border-left: 1px solid $yellow;
+				border-right: 1px solid $yellow;
+				width: 75vw;
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+			}
+		}
+		
+		.marketing-bottom {
+			display: block;
+			border-left: 1px solid $yellow;
+			border-right: 1px solid $yellow;
+			width: 75vw;
+			height: 15.26vw;
+			margin: 0 auto;	
+		}
+	}
+	
+	.blog {
+		display: flex;
+		
+		.blog-lt {
+			display: flex;
+			align-items: center;
+			width: 64%;
+			padding-right: 2.4vw;
+			
+			.slider-wrap {
+				background: $yellow;
+				display: flex;
+				position: relative;
+				height: 100%;
+				
+				.slider {
+					width: 47.83vw;
+					
+					.slick-list, .slick-track {
+						height: 100%;
+					}
+					
+					.slide {
+						position: relative;
+						
+						img {
+							object-fit: cover;
+							height: 100%;
+						}
+						
+						&-title {
+							color: $dkgreen;
+							@extend .oswald-bold;
+							font-size: 2.09vw;
+							line-height: 1.2;
+							background: #f8f8f8;
+							padding: 0.78vw 1.3vw;
+							position: absolute;
+							top: 2.5vw;
+							left: 1.56vw;
+						}
+						
+						&-excerpt {
+							color: $dkgreen;
+							@extend .oswald-reg;
+							font-size: 1.67vw;
+							line-height: 1.2;
+							background: #f8f8f8;
+							padding: 1.67vw 2.09vw;
+							position: absolute;
+							bottom: 1.46vw;
+							left: 1.56vw;
+							max-width: 36.59vw;
+							
+							b, strong {
+								@extend .oswald-bold;
+							}
+						}
+					}
+				}
+				
+				.blog-nav-arrows {
+					display: flex;
+					gap: 0.52vw;
+					position: absolute;
+					bottom: 1.46vw;
+					right: 1.04vw;
+					
+					button.slick-arrow {
+						color: transparent;
+						font-size: 0;
+						line-height: 0;
+						background: #F8F8F8;
+						width: 2.82vw;
+						height: 2.3vw;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						
+						&:after {
+							color: #000;
+							@extend .inter;
+							font-size: 1.05vw;
+							line-height: 1;
+							display: block;
+						}
+						
+						&.slick-prev {
+							&:after {
+								content: '<';
+							}
+						}
+						
+						&.slick-next {
+							&:after {
+								content: '>';
+							}
+						}
+					}
+				}
+				
+				.slider-side {
+					width: 12.44vw;
+					position: relative;
+				}
+			}
+		}
+		
+		.blog-rt {
+			border-left: 1px solid $dkgreen;
+			padding: 26.65vw 0 12.12vw;
+			position: relative;
+			width: 36%;
+			
+			.cross-tl {
+				inset: calc(5vw + 21px) auto auto 0;
+			}
+			.cross-tr {
+				inset: calc(5vw + 21px) 0.78vw auto auto;
+			}
+			.cross-br {
+				inset: auto 0.78vw 1.67vw auto;
+			}
+			
+			.blog-title {
+				color: $ltgreen;
+				@extend .anta;
+				font-size: 5vw;
+				line-height: 1.2;
+				letter-spacing: 0;
+				text-transform: uppercase;
+				border-top: 1px solid $dkgreen;
+				padding: 0.94vw 0.63vw 0.94vw 2.19vw;
+				margin: 0;
+			}
+			
+			.blog-copy {
+				border-top: 1px solid $dkgreen;
+				border-bottom: 1px solid $dkgreen;
+				padding: 1.67vw 2.19vw 1.67vw;
+				
+				p {
+					color: $dkgreen;
+					line-height: 1.2
+				}
+			}
+			
+			.blog-btn {
+				padding: 0.42vw 0 0 2.19vw;
+			}
+		}
+	}
+	
+	.testimonials {
+		display: flex;
+		border-top: 1px solid $dkgreen;
+		
+		.testimonials-lt {
+			width: 50%;
+			padding: 1.57vw 2.5vw;
+			display: flex;
+			align-items: center;
+			
+			h2 {
+				color: $dkgreen;
+				@extend .anta;
+				font-size: 5vw;
+				line-height: .96;
+				text-transform: uppercase;
+			}
+		}
+		.testimonials-rt {
+			width: 50%;
+			background: $dkgreen;
+			padding: 2.09vw;
+			position: relative;
+			
+			.slider {
+				display: flex;
+				flex-direction: column;
+				
+				.slide {
+					p {
+						color: $white;
+						text-align: center;
+						@extend .oswald-reg;
+						font-size: 1.25vw;
+						line-height: 1.2;
+					}
+				}
+			}
+			ul.slick-dots {
+				padding: 0;
+				margin: 0;
+				display: flex;
+				position: absolute;
+				bottom: 2.09vw;
+				left: 2.09vw;
+				right: 2.09vw;
+				
+				li {
+					flex-grow: 1;
+					list-style: none;
+					
+					button {
+						width: 100%;
+						background: $yellow;
+						transition: background .2s linear;
+						font-size: 0;
+						line-height: 0;
+						height: 1.15vw;
+					}
+					
+					&.slick-active {
+						button {
+							background: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

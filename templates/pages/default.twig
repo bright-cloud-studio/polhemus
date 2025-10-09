@@ -1,0 +1,6 @@
+{% extends "_layouts/default" %}
+
+{% block content %}
+  {% set partial = "/compiled/" ~ entry.type.handle %}
+  {% include [partial ~ ".twig", "pages/default.twig"] with { entry: entry } %}
+{% endblock %}

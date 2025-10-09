@@ -1,0 +1,154 @@
+.oswald-lt {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.oswald-reg {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.oswald-med {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.oswald-semi {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.oswald-bold {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.anta {
+	font-family: "Anta", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.inter {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.orbitron {
+	font-family: "Orbitron", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
+}
+
+h1 {
+	@extend .orbitron;
+	font-size: 40px;
+	letter-spacing: -0.01em;
+	line-height: 1;
+	text-shadow: 0 35px 20px rgba(0, 0, 0, 0.30);
+	text-transform: uppercase;
+	
+	@media(min-width: 768px) {
+		font-size: 148px;
+	}
+}
+
+h2 {
+	@extend .anta;
+	font-size: 56px;
+	line-height: 1;
+	letter-spacing:  -0.01em;
+	text-transform: none;
+
+	@media(min-width: 768px) {
+		font-size: 220px;
+	}
+}
+
+h3 {
+	@extend .anta;
+	font-size: 48px;
+	line-height: 1;
+	letter-spacing:  -0.01em;
+	text-transform: uppercase;
+
+	@media(min-width: 768px) {
+		font-size: 128px;
+	}
+}
+
+h4 {
+	@extend .oswald-lt;
+	font-size: 48px;
+	line-height: 1.2;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+h5 {
+	@extend .oswald-med;
+	font-size: 24px;
+	line-height: 1.2;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+a {
+	@extend .oswald-reg;
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 0;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus {
+	text-decoration: none;
+}
+
+p {
+	@extend .oswald-reg;
+	font-size: 1.04vw;
+	line-height: 1.5;
+	letter-spacing: 0;
+}
+
+.small {
+	@extend .oswald-reg;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.superscript {
+	font-size: 32px;
+}
+
+.text-light {
+	color: $white;
+}
+
+.text-dark {
+	color: $black;
+}
+
+.text-yellow {
+	color: $yellow;
+}
+
+.text-green {
+	color: $dkgreen;
+}

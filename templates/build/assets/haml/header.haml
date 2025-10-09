@@ -1,0 +1,83 @@
+- import '_utilities/image' as img
+
+.navbar_component.nav(data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f419" role="banner")
+	.navbar_container-interaction(data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f41a")
+		
+		- include '_partials/logo'
+	
+		
+		- set nodes = craft.navigation.nodes('mainNav').with(['image']).level(1).all()
+		%nav.navbar_menu.nav-menu(role="navigation")
+			.navbar_menu-left
+				- for node in nodes
+					- set att = ''
+					- if node.customAttributes|length
+						- set att = []
+						- for attribute in node.customAttributes.all()
+							- if attribute.attribute|length
+								- set atts = attribute.attribute~'='~attribute.value
+								- set att = att|merge([atts])	
+						- set att = att|join(' ')	
+					
+					- if node.hasDescendants						
+						.navbar_menu-dropdown(data-delay="300" data-hover="true" data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f429")
+							.navbar_dropdown-toggle.dropdown-toggle
+								.menu-item= node.title
+								.dropdown-icon
+									%svg(fill="none" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg")
+										%path(d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67")
+							
+							%nav.navbar_dropdown-list(data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f42e")
+								.nav-dropdown
+									- set subnodes = node.children.toggle(false).all()
+									- set subnodesLg = node.children.toggle(true).all()
+									
+									- if subnodes
+										.nav_items
+											- for subnode in subnodes
+												.nav_item
+													.nav_item_title= subnode.title
+													- set image = ''
+													.subnav_links
+														- for subsubnode in subnode.children
+															- set att = ''
+															- if subsubnode.customAttributes
+																- set att = []
+																- for attribute in subsubnode.customAttributes.all()
+																	- if attribute.attribute|length
+																		- set atts = attribute.attribute~'='~attribute.value
+																		- set att = att|merge([atts])	
+																- set att = att|join(' ')	
+															%a.subnav_link{(subsubnode.classes ? ' class='~subsubnode.classes~' '), href: (subsubnode.url ? subsubnode.url : 'javascript:void(0)'), (subsubnode.active ? 'class="is-active"'), (subsubnode.newWindow ? 'target="_blank" rel="noopener"'), (att)}
+																- set image = subsubnode.image[0] ?? null
+																- if image
+																	%img.nav_image(src=image.url)
+																.nav_text= subsubnode.title
+									
+									- if subnodesLg
+										.nav_item.nav_item-lg
+											- for subnode in subnodesLg
+												- set att = ''
+												- if subnode.customAttributes|length
+													- set att = []
+													- for attribute in subnode.customAttributes.all()
+														- if attribute.attribute|length
+															- set atts = attribute.attribute~'='~attribute.value
+															- set att = att|merge([atts])	
+													- set att = att|join(' ')	
+												.nav_item_title= subnode.title
+												- for subsubnode in subnode.children
+													%a.subnav_link.guide{(subnode.classes ? ' class='~subnode.classes~' '), href: (subnode.url ? subnode.url : 'javascript:void(0)'), (subnode.active ? 'class="is-active"'), (subnode.newWindow ? 'target="_blank" rel="noopener"'), (att)}
+														- set image = subsubnode.image[0] ?? null
+														- if image
+															%img.nav_image(src=image.url)				
+					- else	
+						%a{(node.classes ? ' class='~node.classes~' '), href: (node.url ? node.url : 'javascript:void(0)'), (node.active ? 'class="is-active"'), (node.newWindow ? 'target="_blank" rel="noopener"'), (att)}= node.title
+				
+		.navbar_menu-button
+			.menu-icon_component
+				.menu-icon_line-top
+				.menu-icon_line-middle
+				.menu-icon_line-bottom
+				
+	.nav-overlay

@@ -1,0 +1,28 @@
+<footer>
+  <div class="footer_upper">
+    <div class="logo"></div>
+    <div class="content">
+      <div class="about">
+        <p>Polhemus is a Good Manufacturing Practices (GMP) Contract Manufacturer under U.S. FDA Regulations. We are not a manufacturer of Medical Devices. Polhemus systems are not certified for medical or bio-medical use. Any references to medical or bio-medical use are examples of what medical companies have done with the Products after they have obtained all necessary or appropriate medical certifications. The end user/OEM/VAR must comply with all pertinent FDA/CE regulations pertaining to the development and sale of medical devices and all other regulatory requirements.</p>
+        <div class="social">
+          <a class="facebook" href="" target="_blank"></a>
+          <a class="youtube" href="" target="_blank"></a>
+          <a class="x" href="" target="_blank"></a>
+          <a class="instagram" href="" target="_blank"></a>
+        </div>
+      </div>
+      <div class="top_nav">
+        {{ craft.navigation.render('footerNav') }}
+        <div class="side_nav">
+          {% line 18 %}{{ craft.navigation.render('footerSideNav') }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_lower">
+    <div class="copyright">Copyright &copy; {% line 21 %}{{  now|date('Y')  }} {{  siteName  }}. All rights reserved</div>
+    <div class="sub_nav">
+      {% line 24 %}{{ craft.navigation.render('footerSubNav') }}
+    </div>
+  </div>
+</footer>

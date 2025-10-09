@@ -26,6 +26,8 @@ return GeneralConfig::create()
     
     ->generateTransformsBeforePageLoad(1)
     
+    ->extraAllowedFileExtensions(['riv'])
+    
     ->cpHeadTags([
         ['link', ['rel' => 'icon', 'type' => 'image/svg+xml', 'sizes' => 'any', 'href' => '/icons/favicon.svg']],
     ])

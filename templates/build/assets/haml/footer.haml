@@ -1,0 +1,24 @@
+%footer
+	.footer_upper
+		.logo
+		
+		.content
+			.about
+				%p Polhemus is a Good Manufacturing Practices (GMP) Contract Manufacturer under U.S. FDA Regulations. We are not a manufacturer of Medical Devices. Polhemus systems are not certified for medical or bio-medical use. Any references to medical or bio-medical use are examples of what medical companies have done with the Products after they have obtained all necessary or appropriate medical certifications. The end user/OEM/VAR must comply with all pertinent FDA/CE regulations pertaining to the development and sale of medical devices and all other regulatory requirements.
+				.social
+					%a.facebook(href="" target="_blank")
+					%a.youtube(href="" target="_blank")
+					%a.x(href="" target="_blank")
+					%a.instagram(href="" target="_blank")
+			
+			.top_nav
+				= craft.navigation.render('footerNav')
+
+				.side_nav
+					= craft.navigation.render('footerSideNav')
+	
+	.footer_lower
+		.copyright Copyright &copy; #{ now|date('Y') } #{ siteName }. All rights reserved
+
+		.sub_nav
+			= craft.navigation.render('footerSubNav')

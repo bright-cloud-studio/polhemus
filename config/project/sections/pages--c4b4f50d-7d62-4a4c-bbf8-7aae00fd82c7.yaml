@@ -1,0 +1,39 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 3ff25529-419c-4d4a-8109-16999a22695e # About
+  -
+    uid: 544521cd-66c5-4443-bd14-06fae01c2a90 # General
+  -
+    uid: 40ce5a4b-d59b-4f98-b3a7-ede4dd81be9b # Markets
+  -
+    uid: 97944685-dad4-4391-9435-90fbf757bd94 # Military
+  -
+    uid: d8b1ff34-56c8-40b1-98b7-9cd055ea6fc3 # Products
+handle: pages
+maxAuthors: 1
+name: Pages
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Polhemus
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages.twig
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 97fc32ea-6e86-45dd-b3dd-97cdc4360518
+type: structure

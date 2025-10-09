@@ -1,16 +1,9 @@
-/.ddev/docker-compose.local.yaml
 /.env
 /.idea
 /vendor
-/node_modules
 .DS_Store
-!seed.sql
 /web/cpresources
 
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
-
-# Cypress
-/cypress.config.js
+/templates/build/node_modules
+/templates/build/package-lock.json
+/templates/build/.sass-cache

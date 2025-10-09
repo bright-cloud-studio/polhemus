@@ -1,0 +1,53 @@
+color: null
+description: null
+fieldLayouts:
+  500553a1-a395-454d-94de-f6a7c0e49fce:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-10-03T13:52:51+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 07fac262-ac54-4919-83e6-8f53b90c1b1b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5ccb9b5f-154f-4120-a3bb-3ffe386ff73b
+        userCondition: null
+handle: markets
+hasTitleField: true
+icon: chart-line-up
+name: Markets
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

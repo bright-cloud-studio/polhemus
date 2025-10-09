@@ -1,0 +1,163 @@
+columnSuffix: null
+handle: contentBlock
+instructions: null
+name: 'Content Block'
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - 9dc38ca0-0e04-4597-af1a-ac0834056694
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    1:
+                      - uid
+                      - 41616fc9-9f07-48f1-9361-864a652d7094
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - image2
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 50
+                            10:
+                              - dateAdded
+                              - '2025-10-05T21:16:59+00:00'
+                            11:
+                              - uid
+                              - 7b6cf266-acb1-4834-a97c-da16d72d326b
+                            14:
+                              - fieldUid
+                              - 6c9778b8-507c-4108-937d-6ceeabf35047 # Image
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 50
+                            10:
+                              - dateAdded
+                              - '2025-10-05T21:16:59+00:00'
+                            11:
+                              - uid
+                              - 9d864e8a-0d49-476d-96a0-e67ae6506d0e
+                            14:
+                              - fieldUid
+                              - 6c9778b8-507c-4108-937d-6ceeabf35047 # Image
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-05T21:16:59+00:00'
+                            11:
+                              - uid
+                              - a4b2ce85-8d6f-4535-ae39-dc36f822aa4c
+                            14:
+                              - fieldUid
+                              - 6d2e5577-5ded-43c9-96e2-d4fc4c770fe9 # Text
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-05T21:16:59+00:00'
+                            11:
+                              - uid
+                              - 40cd754d-637e-4517-85d3-4c5c07f9438a
+                            14:
+                              - fieldUid
+                              - 9d42aa56-4a66-4d0b-b8a9-84a4cb387788 # Text block
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-05T21:16:59+00:00'
+                            11:
+                              - uid
+                              - 01b968c4-ffee-4633-8516-9f39dedb866b
+                            14:
+                              - fieldUid
+                              - c23a2c69-43fc-408a-9f56-8b07c05d6c0b # Toggle
+            3:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

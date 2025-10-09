@@ -1,0 +1,110 @@
+{% import '_utilities/image' as img %}
+<div class="navbar_component nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f419" role="banner">
+  <div class="navbar_container-interaction" data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f41a">
+{% line 6 %}    {% include '_partials/logo' %}
+{% line 9 %}    {% set nodes = craft.navigation.nodes('mainNav').with(['image']).level(1).all() %}
+    <nav class="navbar_menu nav-menu" role="navigation">
+      <div class="navbar_menu-left">
+        {% for node in nodes %}
+          {% set att = '' %}
+          {% if node.customAttributes|length %}
+            {% set att = [] %}
+            {% for attribute in node.customAttributes.all() %}
+              {% if attribute.attribute|length %}
+                {% set atts = attribute.attribute~'='~attribute.value %}
+                {% set att = att|merge([atts])	 %}
+              {% endif %}
+            {% endfor %}
+{% line 20 %}            {% set att = att|join(' ')	 %}
+          {% endif %}
+          {% if node.hasDescendants						 %}
+            <div class="navbar_menu-dropdown" data-delay="300" data-hover="true" data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f429">
+              <div class="navbar_dropdown-toggle dropdown-toggle">
+                <div class="menu-item">{{ node.title }}</div>
+                <div class="dropdown-icon">
+                  <svg fill="none" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67"></path>
+                  </svg>
+                </div>
+              </div>
+              <nav class="navbar_dropdown-list" data-w-id="09a5ca17-72f5-0c4f-9ee1-fcee6bf5f42e">
+                <div class="nav-dropdown">
+{% line 32 %}                  {% set subnodes = node.children.toggle(false).all() %}
+                  {% set subnodesLg = node.children.toggle(true).all() %}
+{% line 35 %}                  {% if subnodes %}
+                    <div class="nav_items">
+                      {% for subnode in subnodes %}
+                        <div class="nav_item">
+                          <div class="nav_item_title">{{ subnode.title }}</div>
+                          {% set image = '' %}
+                          <div class="subnav_links">
+                            {% for subsubnode in subnode.children %}
+                              {% set att = '' %}
+                              {% if subsubnode.customAttributes %}
+                                {% set att = [] %}
+                                {% for attribute in subsubnode.customAttributes.all() %}
+                                  {% if attribute.attribute|length %}
+                                    {% set atts = attribute.attribute~'='~attribute.value %}
+                                    {% set att = att|merge([atts])	 %}
+                                  {% endif %}
+                                {% endfor %}
+{% line 50 %}                                {% set att = att|join(' ')	 %}
+                              {% endif %}
+                              <a class="subnav_link"{% line 51 %}{{ (subsubnode.classes ? ' class='~subsubnode.classes~' ') }} href="{{ (subsubnode.url ? subsubnode.url : 'javascript:void(0)') }}"{{ (subsubnode.active ? 'class="is-active"') }}{{ (subsubnode.newWindow ? 'target="_blank" rel="noopener"') }}{{ (att) }}>
+                                {% set image = subsubnode.image[0] ?? null %}
+                                {% if image %}
+                                  <img class="nav_image" src="{{ image.url }}">
+                                {% endif %}
+                                <div class="nav_text">{% line 55 %}{{ subsubnode.title }}</div>
+                              </a>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+{% line 57 %}                  {% if subnodesLg %}
+                    <div class="nav_item nav_item-lg">
+                      {% for subnode in subnodesLg %}
+                        {% set att = '' %}
+                        {% if subnode.customAttributes|length %}
+                          {% set att = [] %}
+                          {% for attribute in subnode.customAttributes.all() %}
+                            {% if attribute.attribute|length %}
+                              {% set atts = attribute.attribute~'='~attribute.value %}
+                              {% set att = att|merge([atts])	 %}
+                            {% endif %}
+                          {% endfor %}
+{% line 67 %}                          {% set att = att|join(' ')	 %}
+                        {% endif %}
+                        <div class="nav_item_title">{% line 68 %}{{ subnode.title }}</div>
+                        {% for subsubnode in subnode.children %}
+                          <a class="subnav_link" class="guide"{{ (subnode.classes ? ' class='~subnode.classes~' ') }} href="{{ (subnode.url ? subnode.url : 'javascript:void(0)') }}"{{ (subnode.active ? 'class="is-active"') }}{{ (subnode.newWindow ? 'target="_blank" rel="noopener"') }}{{ (att) }}>
+                            {% set image = subsubnode.image[0] ?? null %}
+                            {% if image %}
+                              <img class="nav_image" src="{{ image.url }}">
+                            {% endif %}
+                          </a>
+                        {% endfor %}
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              </nav>
+            </div>
+{% line 74 %}          {% else	 %}
+            <a{{ (node.classes ? ' class='~node.classes~' ') }} href="{{ (node.url ? node.url : 'javascript:void(0)') }}"{{ (node.active ? 'class="is-active"') }}{{ (node.newWindow ? 'target="_blank" rel="noopener"') }}{{ (att) }}>{{ node.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+    <div class="navbar_menu-button">
+      <div class="menu-icon_component">
+        <div class="menu-icon_line-top"></div>
+        <div class="menu-icon_line-middle"></div>
+        <div class="menu-icon_line-bottom"></div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay"></div>
+</div>

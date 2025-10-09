@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 70367baf-8815-4efc-a9e3-91985c8ae6d9 # Selection Guide
+handle: selectionGuide
+maxAuthors: 1
+name: 'Motion Tracking Selection Guide'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Polhemus
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/selection-guide.twig
+    uriFormat: '{slug}'
+type: single

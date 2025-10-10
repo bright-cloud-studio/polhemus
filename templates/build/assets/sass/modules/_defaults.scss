@@ -4,8 +4,15 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
-	background: linear-gradient(61deg, #014B26 -15.5%, #000 97.46%);
 	scroll-behavior: smooth;
+	
+	main {
+		background: linear-gradient(61deg, #014B26 -15.5%, #000 97.46%);
+	}
+}
+
+.push {
+	padding: 100px 0;
 }
 
 .sr-only:not(:focus):not(:active) {

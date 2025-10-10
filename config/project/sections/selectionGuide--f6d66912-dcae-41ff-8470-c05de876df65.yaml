@@ -8,21 +8,14 @@ maxAuthors: 1
 name: 'Motion Tracking Selection Guide'
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Polhemus
     enabledByDefault: true
     hasUrls: true
-    template: pages/selection-guide.twig
+    template: _pages.twig
     uriFormat: '{slug}'
 type: single

@@ -29,7 +29,7 @@ return GeneralConfig::create()
     ->extraAllowedFileExtensions(['riv'])
     
     ->cpHeadTags([
-        ['link', ['rel' => 'icon', 'type' => 'image/svg+xml', 'sizes' => 'any', 'href' => '/icons/favicon.svg']],
+        ['link', ['rel' => 'icon', 'type' => 'image/svg+xml', 'sizes' => 'any', 'href' => '/assets/icons/favicon.svg']],
     ])
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',

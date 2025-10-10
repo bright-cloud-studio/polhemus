@@ -1,5 +1,5 @@
 .products {
-	.hero-section {
+	.hero {
 		background-image: url("https://pom-craft.transforms.svdcdn.com/local/media/media/Template/product_hero-bg.jpg?w=1920&h=1080&auto=compress%2Cformat%2Cavif&fit=crop&dm=1759853989&s=7dccbef6d91ed9255dc4680627fde7e2"), linear-gradient(42deg, #004a25 16%, #000 99%);
 		background-repeat: no-repeat, repeat;
 		background-size: cover, auto;
@@ -199,7 +199,7 @@
 		}
 	}
 
-	.intro-section {
+	.intro {
 		display: flex;
 		grid-column-gap: 2.09vw;
 		grid-row-gap: 2.09vw;
@@ -359,7 +359,7 @@
 		}
 	}
 
-	.device-section {
+	.device {
 		background: linear-gradient(134deg, #000 -3.75%, #003D1E 59.94%);
 		flex-flow: row;
 		display: flex;
@@ -389,7 +389,7 @@
 					position: absolute;
 					overflow: visible;
 
-					.rive-scroll-section, .rive-scroll-section-temp {
+					.rive-scroll-section {
 						aspect-ratio: 1;
 						object-fit: fill;
 						width: 100%;
@@ -756,7 +756,7 @@
 		}
 	}
 	
-	.comparison-section {
+	.comparison {
 		background: linear-gradient(112deg, #000 -4.75%, #014B26 103.24%);
 		
 		.comparison-container {

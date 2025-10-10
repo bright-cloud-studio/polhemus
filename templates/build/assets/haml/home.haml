@@ -21,17 +21,19 @@
 	.about-lt
 		.cross.green.cross-tl(data-spinner)
 		.cross.green.cross-tr
-		%h2.about-title The Global Leader in 3D Motion Tracking For Over 50 Years
+		.about-title
+			%h2(data-anim="fade-left" data-distance="30") The Global Leader in 3D Motion Tracking For Over 50 Years
 		.about-copy
-			%p Polhemus products are used around the globe in healthcare, research and technology, and military applications. We deliver 6DOF motion tracking solutions with ultra-low latency and high performance sensors that are fully embeddable. We offer the highest quality tracking systems, the latest in 3D laser scanning and state-of-the art eye tracking solutions. We're the preferred choice for medical applications, including training and simulation, military training and helmet tracking on live aircraft, the world's top researchers and more.
-		.about-btn
+			.content(data-anim="fade-left" data-delay="250" data-distance="30")
+				%p Polhemus products are used around the globe in healthcare, research and technology, and military applications. We deliver 6DOF motion tracking solutions with ultra-low latency and high performance sensors that are fully embeddable. We offer the highest quality tracking systems, the latest in 3D laser scanning and state-of-the art eye tracking solutions. We're the preferred choice for medical applications, including training and simulation, military training and helmet tracking on live aircraft, the world's top researchers and more.
+		.about-btn(data-anim="fade-left" data-delay="500" data-distance="30")
 			%a.button.green(href="") Learn more
 		.cross.green.cross-bl
 		.cross.green.cross-br(data-spinner)
 		
 		
 	.about-rt
-		.slider-wrap
+		.slider-wrap(data-anim="fade-right")
 			.slider(data-autoplay="true" data-infinite="true" data-append-arrows=".nav-arrows")
 				.slide
 					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/home-slide.png?w=1780&h=1501&auto=compress%2Cformat%2Cavif&fit=crop&dm=1759925778&s=d2e8a357d996982320485c700dba7a84" alt="")
@@ -56,15 +58,15 @@
 			.logo
 	.marketing-ctas
 		%p Our motion tracking products power a wide variety of applications around the world.	
-		%a.marketing-cta(href="")
+		%a.marketing-cta(href="" data-anim="fade-up")
 			%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/scientist.jpg?w=2000&h=1100&auto=compress%2Cformat%2Cavif&fit=crop&dm=1759941385&s=8b6e884ff12471d20deefeb8d4520430" alt="")
 			.type Technology & Research
 			.more Learn More
-		%a.marketing-cta(href="")
+		%a.marketing-cta(href="" data-anim="fade-up")
 			%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/pilot.jpg?w=1200&h=800&auto=compress%2Cformat%2Cavif&fit=crop&dm=1759941383&s=725a51fd9ccc64c93d5af4b0e6e30c74" alt="")
 			.type Military
 			.more Learn More
-		%a.marketing-cta(href="")
+		%a.marketing-cta(href="" data-anim="fade-up")
 			%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/doctor.jpg?w=1200&h=800&auto=compress%2Cformat%2Cavif&fit=crop&dm=1759941381&s=94077f7a356182a0163efbcebbe6c09a" alt="")
 			.type Medical
 			.more Learn More
@@ -79,7 +81,7 @@
 	
 %section.blog		
 	.blog-lt
-		.slider-wrap
+		.slider-wrap(data-anim="fade-left")
 			.slider-side
 			.slider(data-autoplay="true" data-fade="true" data-infinite="true" data-append-arrows=".blog-nav-arrows")
 				.slide
@@ -96,10 +98,12 @@
 	.blog-rt
 		.cross.green.cross-tl(data-spinner)
 		.cross.green.cross-tr
-		%h2.blog-title Insights
+		.blog-title
+			%h2(data-anim="fade-right") Insights
 		.blog-copy
-			%p With over 50 years of experience, we bring you insights, new developments, and stories of interest on all things motion tracking --from the global leader and industry experts.
-		.blog-btn
+			.content(data-anim="fade-right")
+				%p With over 50 years of experience, we bring you insights, new developments, and stories of interest on all things motion tracking --from the global leader and industry experts.
+		.blog-btn(data-anim="fade-right")
 			%a.button.green(href="") See All Posts
 		.cross.green.cross-br(data-spinner)
 		

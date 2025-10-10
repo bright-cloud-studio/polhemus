@@ -79,7 +79,7 @@
                         {% endif %}
                         <div class="nav_item_title">{% line 68 %}{{ subnode.title }}</div>
                         {% for subsubnode in subnode.children %}
-                          <a class="subnav_link" class="guide"{{ (subnode.classes ? ' class='~subnode.classes~' ') }} href="{{ (subnode.url ? subnode.url : 'javascript:void(0)') }}"{{ (subnode.active ? 'class="is-active"') }}{{ (subnode.newWindow ? 'target="_blank" rel="noopener"') }}{{ (att) }}>
+                          <a class="subnav_link" class="guide"{{ (subsubnode.classes ? ' class='~subsubnode.classes~' ') }} href="{{ (subsubnode.url ? subsubnode.url : 'javascript:void(0)') }}"{{ (subsubnode.active ? 'class="is-active"') }}{{ (subsubnode.newWindow ? 'target="_blank" rel="noopener"') }}{{ (att) }}>
                             {% set image = subsubnode.image[0] ?? null %}
                             {% if image %}
                               <img class="nav_image" src="{{ image.url }}">

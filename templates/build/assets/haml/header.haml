@@ -67,7 +67,7 @@
 													- set att = att|join(' ')	
 												.nav_item_title= subnode.title
 												- for subsubnode in subnode.children
-													%a.subnav_link.guide{(subnode.classes ? ' class='~subnode.classes~' '), href: (subnode.url ? subnode.url : 'javascript:void(0)'), (subnode.active ? 'class="is-active"'), (subnode.newWindow ? 'target="_blank" rel="noopener"'), (att)}
+													%a.subnav_link.guide{(subsubnode.classes ? ' class='~subsubnode.classes~' '), href: (subsubnode.url ? subsubnode.url : 'javascript:void(0)'), (subsubnode.active ? 'class="is-active"'), (subsubnode.newWindow ? 'target="_blank" rel="noopener"'), (att)}
 														- set image = subsubnode.image[0] ?? null
 														- if image
 															%img.nav_image(src=image.url)				

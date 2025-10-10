@@ -9,6 +9,12 @@ body {
 	main {
 		background: linear-gradient(61deg, #014B26 -15.5%, #000 97.46%);
 	}
+	
+	&.home {
+		main {
+			background: #F8F8F8;
+		}
+	}
 }
 
 .push {

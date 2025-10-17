@@ -1,3 +1,110 @@
-.push
-%h1= entry.title
-.push
+- set products = craft.entries().type('products').all()
+%section.hero
+	%h1= entry.title
+	.intro 
+		%p.large What is most important to you in finding the right motion tracking product? Do you need a wireless product? The highest level of precision tracking? Or something else? Scroll down to the Motion Tracking Selection Guide below to view your best options.
+	.cross.white.cross-tl(data-spinner)
+	.cross.white.cross-br(data-spinner)	
+		
+%section.filter
+	%form.controls
+		-#%button.control.control-text(type="reset") Reset
+		%fieldset.control-group(data-filter-group)
+			%label.control-group-label # of Tracking Points
+			%button.control.points(data-toggle=".fastrack" type="button") 1-2
+			%button.control.points(data-toggle="._1" type="button") 1-4
+			%button.control.points(data-toggle="._4" type="button") 5+
+		%fieldset.control-group(data-filter-group)
+			%label.control-group-label Is Wireless Required?
+			%button.control.wireless(data-toggle=".wireless-one" type="button")
+			%button.control.wireless(data-toggle=".wireless-two" type="button")
+			%button.control.wireless(data-toggle=".wireless-three" type="button")
+		%fieldset.control-group(data-filter-group)
+			%label.control-group-label Data Speed
+			%button.control.speed(data-toggle=".patriot" type="button")
+			%button.control.speed(data-toggle=".patriot-wireless" type="button")
+			%button.control.speed(data-toggle=".viper" type="button")
+		%fieldset.control-group(data-filter-group)
+			%label.control-group-label Accuracy
+			%button.control.accuracy(data-toggle="._1" type="button")
+			%button.control.accuracy(data-toggle="._2" type="button")
+			%button.control.accuracy(data-toggle="._3" type="button")
+		%fieldset.control-group(data-filter-group)
+			%label.control-group-label Latency
+			%button.control.latency(data-toggle="._4" type="button")
+			%button.control.latency(data-toggle="._5" type="button")
+			%button.control.latency(data-toggle="._6" type="button")
+		%fieldset.control-group(data-filter-group)
+			%label.control-group-label Portability
+			%button.control.portability(data-toggle="._7" type="button")
+			%button.control.portability(data-toggle=".liberty-latus" type="button")
+			%button.control.portability(data-toggle=".g4" type="button")
+			
+	.mix-container
+		- set count = 1
+		- for product in products
+			%div(class="mix _#{ count } #{ product.title|kebab }")
+				.mix-image
+					- if product.image
+						%figure
+							- set assets = product.image.eagerly().one()
+							- if assets
+								%img(src=assets.url('medium') alt=assets.alt)
+				.mix-title= product.title
+				.mix-details
+					.detail
+						.title Points
+					.detail
+						.title Accuracy
+					.detail
+						.title Speed
+					.detail
+						.title Latency
+					.detail
+						.title Wireless
+					.detail
+						.title Portability
+			- set count = count + 1
+				
+%section.cta
+	%a.button.sm.yellow(href="" target="") Talk to Sales
+				
+%section.promo
+	.promo-inner
+		.cross.white.cross-tr(data-spinner)
+		.cross.white.cross-bl(data-spinner)
+		%h2.promo-title Real-Time, Reliable Data. From The Motion Tracking Experts.
+		.promo-content
+			%p.large We offer a variety of motion tracking systems, and we continue to introduce new products, based on market demand. Whether you need to track a person, an object, or several people or objects, we can assist you in determining which tracking system will work best for you. We are the experts in motion tracking and motion capture. Polhemus has been delivering full 6DOF electromagnetic motion trackers for over 50 years.
+
+%section.cta-border
+	%a.button.sm.yellow(href="" target="") Talk to Sales
+	
+%section.our-trackers
+	%h2 Our Trackers
+	%h3 Reason to Believe
+	%p We're experts in the field.. in fact, we made this product.
+	
+	.trackers
+		.tracker-lt
+			- for product in products
+				- if product.slug not in ['scout', 'liberty-latus']
+					%div(class="tracker #{ product.slug }")
+						- if product.slug == 'viper'
+							- if product.image2
+								- set assets = product.image2.eagerly().one()
+								- if assets
+									%img(src=assets.url('large') alt=assets.alt)
+						- else
+							- if product.image
+								- set assets = product.image.eagerly().one()
+								- if assets
+									%img(src=assets.url('large') alt=assets.alt)
+		.tracker-lt
+			- for product in products
+				- if product.slug in ['scout', 'liberty-latus']
+					%div(class="tracker #{ product.slug }")
+						- if product.image
+							- set assets = product.image.eagerly().one()
+							- if assets
+								%img(src=assets.url('xL') alt=assets.alt)

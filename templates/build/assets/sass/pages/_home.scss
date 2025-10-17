@@ -9,21 +9,21 @@
 	
 	.navigation {
 		margin-top: 0.52vw;
-		border-top: 1px solid $dkgreen;
-		border-bottom: 1px solid $dkgreen;
+		border-top: 1px solid $green;
+		border-bottom: 1px solid $green;
 		
 		.ctas {
 			display: flex;
 			padding: 0 2.5vw;
 			
 			.cta {
-				border-right: 1px solid $dkgreen;
+				border-right: 1px solid $green;
 				position: relative;
 				overflow: hidden;
 				width: 25%;
 				
 				&:first-child {
-					border-left: 1px solid $dkgreen;
+					border-left: 1px solid $green;
 				}
 				
 				img {
@@ -34,7 +34,7 @@
 				}
 				
 				&-title {
-					color: $dkgreen;
+					color: $green;
 					@extend .oswald-med;
 					font-size: 1.25vw;
 					line-height: 1;
@@ -64,7 +64,7 @@
 		display: flex;
 		
 		.about-lt {
-			border-right: 1px solid $dkgreen;
+			border-right: 1px solid $green;
 			padding: 24.25vw 0 5.96vw;
 			position: relative;
 			width: 36%;
@@ -83,27 +83,25 @@
 			}
 			
 			.about-title {
-				border-top: 1px solid $dkgreen;
+				border-top: 1px solid $green;
 				padding: 0.94vw 0.63vw 0.94vw 3.76vw;
 				
 				h2 {
 					color: $ltgreen;
-					@extend .anta;
 					font-size: 2.5vw;
 					line-height: 1.2;
 					letter-spacing: 0;
-					text-transform: uppercase;
 					margin: 0;
 				}
 			}
 			
 			.about-copy {
-				border-top: 1px solid $dkgreen;
-				border-bottom: 1px solid $dkgreen;
+				border-top: 1px solid $green;
+				border-bottom: 1px solid $green;
 				padding: 1.67vw 3.76vw 1.67vw;
 				
 				p {
-					color: $dkgreen;
+					color: $green;
 					line-height: 1.2
 				}
 			}
@@ -206,11 +204,9 @@
 			
 			h2 {
 				color: $white;
-				@extend .anta;
 				font-size: 2.5vw;
 				line-height: 1;
 				text-align: center;
-				text-transform: uppercase;
 				border-left: 1px solid $yellow;
 				border-right: 1px solid $yellow;
 				width: 75vw;
@@ -279,7 +275,7 @@
 				}
 				
 				.type {
-					color: $dkgreen;
+					color: $green;
 					@extend .anta;
 					font-size: 2.5vw;
 					line-height: normal;
@@ -405,7 +401,7 @@
 						}
 						
 						&-title {
-							color: $dkgreen;
+							color: $green;
 							@extend .oswald-bold;
 							font-size: 2.09vw;
 							line-height: 1.2;
@@ -417,7 +413,7 @@
 						}
 						
 						&-excerpt {
-							color: $dkgreen;
+							color: $green;
 							@extend .oswald-reg;
 							font-size: 1.67vw;
 							line-height: 1.2;
@@ -483,7 +479,7 @@
 		}
 		
 		.blog-rt {
-			border-left: 1px solid $dkgreen;
+			border-left: 1px solid $green;
 			padding: 26.65vw 0 12.12vw;
 			position: relative;
 			width: 36%;
@@ -499,27 +495,25 @@
 			}
 			
 			.blog-title {
-				border-top: 1px solid $dkgreen;
+				border-top: 1px solid $green;
 				padding: 0.94vw 0.63vw 0.94vw 2.19vw;
 				
 				h2 {
 					color: $ltgreen;
-					@extend .anta;
 					font-size: 5vw;
 					line-height: 1.2;
 					letter-spacing: 0;
-					text-transform: uppercase;
 					margin: 0;
 				}
 			}
 			
 			.blog-copy {
-				border-top: 1px solid $dkgreen;
-				border-bottom: 1px solid $dkgreen;
+				border-top: 1px solid $green;
+				border-bottom: 1px solid $green;
 				padding: 1.67vw 2.19vw 1.67vw;
 				
 				p {
-					color: $dkgreen;
+					color: $green;
 					line-height: 1.2
 				}
 			}
@@ -532,7 +526,7 @@
 	
 	.testimonials {
 		display: flex;
-		border-top: 1px solid $dkgreen;
+		border-top: 1px solid $green;
 		
 		.testimonials-lt {
 			width: 50%;
@@ -541,16 +535,14 @@
 			align-items: center;
 			
 			h2 {
-				color: $dkgreen;
-				@extend .anta;
+				color: $green;
 				font-size: 5vw;
 				line-height: .96;
-				text-transform: uppercase;
 			}
 		}
 		.testimonials-rt {
 			width: 50%;
-			background: $dkgreen;
+			background: $green;
 			padding: 2.09vw;
 			position: relative;
 			
@@ -562,8 +554,6 @@
 					p {
 						color: $white;
 						text-align: center;
-						@extend .oswald-reg;
-						font-size: 1.25vw;
 						line-height: 1.2;
 					}
 				}

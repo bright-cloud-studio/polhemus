@@ -9,6 +9,18 @@
 	padding: 24px;
 	margin: 0;
 	
+	&.sm {
+		@extend .oswald-med;
+		font-size: 18px;
+		padding: 10px 24px;
+	}
+	
+	&.md {
+		@extend .oswald-med;
+		font-size: 28px;
+		padding: 10px 24px;
+	}
+	
 	&.lg {
 		@extend .oswald-bold;
 		font-size: 36px;
@@ -16,7 +28,7 @@
 	}
 	
 	&.white {
-		color: $dkgreen;
+		color: $green;
 		background: $white;
 	}
 	
@@ -26,7 +38,7 @@
 	}
 	
 	&.yellow {
-		color: $dkgreen;
+		color: $green;
 		border: 1px solid $yellow;
 		background: $yellow;
 	}

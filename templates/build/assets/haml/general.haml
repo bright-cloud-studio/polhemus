@@ -1,3 +1,143 @@
+- set products = craft.entries().type('products').all()
+
 .push
 %h1= entry.title
 .push
+
+%section.marquee(data-speed="90")
+	.marquee__viewport(aria-live="off")
+		%ul.marquee__track
+			%li.card(tabindex="0")
+				.award op Simulation Solution Provider
+				.source MedTech Outlook Magazine 2023
+			%li.card(tabindex="0")
+				.award Wired for 3D Award
+				.source 3D Design Magazine
+			%li.card(tabindex="0")
+				.award Innovation Award
+				.source Military Training Technology Magazine 2009
+			%li.card(tabindex="0")
+				.award NDES Show Stopper Award
+				.source Cadence Magazine
+			%li.card(tabindex="0")
+				.award Editor's Choice Award
+				.source Computer Graphics World
+				
+%section.ctas
+	.cta-border
+		%a.button.sm.yellow(href="" target="") Talk to Sales
+	.cta-border
+		%a.button.md.yellow(href="" target="") Talk to Sales
+	.cta-border
+		%a.button.lg.yellow(href="" target="") Talk to Sales
+		
+%section.features
+	.features-title
+		%h2 Features Section
+		.intro Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet  . Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget te
+		
+	.feature-container.odd
+		.feature-container-lt
+			.cross.white.cross-tr(data-spinner)
+			.cross.yellow.cross-tl
+			.cross.white.cross-bl(data-spinner)
+			.cross.yellow.cross-br
+			
+			.feature-content
+				%h2(data-anim="fade-left" data-distance="30" style="opacity:0") Feature category    
+				%h3(data-anim="fade-left" data-delay="250" data-distance="30" style="opacity:0") Feature 1
+			.feature-content
+				.content(data-anim="fade-left" data-delay="500" data-distance="30" style="opacity:0")
+					%p Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus.
+					
+			.feature-content.bottom
+				%a.button.yellow.w-button(href="" data-anim="fade-left" data-delay="750" data-distance="30" style="opacity:0") Learn More
+				%a.button.green.w-button(href="" data-anim="fade-left" data-delay="1000" data-distance="30" style="opacity:0") Talk to Sales
+		
+		.feature-container-rt(data-anim="fade-right" style="opacity:0")
+			.media
+				%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/general_3.jpg?w=2000&h=1333&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760721452&s=f104a4fb6f340a227bfdabcd19fcbb5c" alt="")
+			.side-container	
+		
+	.feature-container.even
+		.feature-container-lt(data-anim="fade-left" style="opacity:0")
+			.side-container
+			.media
+				%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/general_2.jpg?w=1920&h=1080&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760721450&s=c05b753df3cfbf6add41a6b4be1a9812" alt="")
+		
+		.feature-container-rt
+			.cross.white.cross-tr(data-spinner)
+			.cross.yellow.cross-tl
+			.cross.white.cross-bl(data-spinner)
+			.cross.yellow.cross-br
+			
+			.feature-content
+				%h2(data-anim="fade-right" data-distance="30" style="opacity:0") Feature category  
+				%h3(data-anim="fade-right" data-delay="250" data-distance="30" style="opacity:0") Feature 2
+			.feature-content
+				.content(data-anim="fade-right" data-delay="500" data-distance="30" style="opacity:0")
+					%p Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus.
+					
+			.feature-content.bottom
+				%a.button.yellow.w-button(href="" data-anim="fade-right" data-delay="750" data-distance="30" style="opacity:0") Learn More
+				%a.button.green.w-button(href="" data-anim="fade-right" data-delay="1000" data-distance="30" style="opacity:0") Talk to Sales
+	
+	.feature-container.odd
+		.feature-container-lt
+			.cross.white.cross-tr(data-spinner)
+			.cross.yellow.cross-tl
+			.cross.white.cross-bl(data-spinner)
+			.cross.yellow.cross-br
+			
+			.feature-content
+				%h2(data-anim="fade-left" data-distance="30" style="opacity:0") Feature category  
+				%h3(data-anim="fade-left" data-delay="250" data-distance="30" style="opacity:0") Feature 3
+			.feature-content
+				.content(data-anim="fade-left" data-delay="500" data-distance="30" style="opacity:0")
+					%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+					
+			.feature-content.bottom
+				%a.button.yellow.w-button(href="" data-anim="fade-left" data-delay="750" data-distance="30" style="opacity:0") Learn More
+				%a.button.green.w-button(href="" data-anim="fade-left" data-delay="1000" data-distance="30" style="opacity:0") Talk to Sales
+		
+		.feature-container-rt(data-anim="fade-right" style="opacity:0")
+			.media
+				%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/general_1.jpg?w=1900&h=1264&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760721447&s=0e575c8781d41cec358a7c7d08d79b26" alt="")
+			.side-container
+			
+%section.our-trackers
+	%h2 Our Trackers
+	%h3 Reason to Believe
+	%p We're experts in the field.. in fact, we made this product.
+	
+	.trackers
+		.tracker-lt
+			- for product in products
+				- if product.slug not in ['scout', 'liberty-latus']
+					%div(class="tracker #{ product.slug }")
+						- if product.slug == 'viper'
+							- if product.image2
+								- set assets = product.image2.eagerly().one()
+								- if assets
+									%img(src=assets.url('large') alt=assets.alt)
+						- else
+							- if product.image
+								- set assets = product.image.eagerly().one()
+								- if assets
+									%img(src=assets.url('large') alt=assets.alt)
+		.tracker-lt
+			- for product in products
+				- if product.slug in ['scout', 'liberty-latus']
+					%div(class="tracker #{ product.slug }")
+						- if product.image
+							- set assets = product.image.eagerly().one()
+							- if assets
+								%img(src=assets.url('xL') alt=assets.alt)
+								
+%section.blog
+	%h2 Blog Feed
+	.intro
+		%p Below is a sample of case studies relevant to the military market.
+	
+	.cta
+		%a.button.lg.yellow(href="" target="") View all case studies

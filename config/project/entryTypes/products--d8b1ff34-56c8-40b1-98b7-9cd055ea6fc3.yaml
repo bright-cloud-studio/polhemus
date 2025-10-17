@@ -38,6 +38,40 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-10-14T12:19:37+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6c9778b8-507c-4108-937d-6ceeabf35047 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Product Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9aaac461-2e57-4791-9a44-761135d8ab23
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-10-15T12:38:43+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6c9778b8-507c-4108-937d-6ceeabf35047 # Image
+            handle: image2
+            includeInCards: false
+            instructions: 'If a second image it desired to choose from.'
+            label: 'Alt Product Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4e96df3-e622-49a8-abfe-66ce951bf7f1
+            userCondition: null
+            warning: null
+            width: 50
+          -
             dateAdded: '2025-10-05T21:18:33+00:00'
             editCondition: null
             elementCondition: null

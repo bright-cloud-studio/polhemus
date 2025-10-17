@@ -670,7 +670,7 @@ body.home {
 	.navbar_component {
 		.navbar_container-interaction {
 			background-image: linear-gradient(62deg, #F8F8F8, #F8F8F8);
-			border-bottom: 1px solid $dkgreen;
+			border-bottom: 1px solid $green;
 			
 			.nav-brand {
 				svg {
@@ -683,12 +683,12 @@ body.home {
 			.navbar_menu {
 				.navbar_menu-left {
 					.menu-item {
-						color: $dkgreen;
-						border-right: 1px solid $dkgreen;
+						color: $green;
+						border-right: 1px solid $green;
 					}
 					.navbar_menu-dropdown {						
 						.navbar_dropdown-toggle {
-							border-right: 1px solid $dkgreen;
+							border-right: 1px solid $green;
 							
 							.menu-item {
 								border-right: none;
@@ -697,7 +697,7 @@ body.home {
 							.dropdown-icon {
 								svg {
 									path {
-										stroke: $dkgreen;
+										stroke: $green;
 									}
 								}
 							}
@@ -709,15 +709,15 @@ body.home {
 			.navbar_menu-button {
 				.menu-icon_component {
 					.menu-icon_line-bottom {
-						background-color: $dkgreen;
+						background-color: $green;
 					}
 					
 					.menu-icon_line-middle {
-						background-color: $dkgreen;
+						background-color: $green;
 					}
 					
 					.menu-icon_line-top {
-						background-color: $dkgreen;
+						background-color: $green;
 					}
 				}
 			}

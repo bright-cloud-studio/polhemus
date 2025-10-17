@@ -1,3 +1,148 @@
-<div class="push"></div>
-<h1>{{ entry.title }}</h1>
-<div class="push"></div>
+{% set products = craft.entries().type('products').all() %}
+<section class="hero">
+  <h1>{{ entry.title }}</h1>
+  <div class="intro">
+    <p class="large">What is most important to you in finding the right motion tracking product? Do you need a wireless product? The highest level of precision tracking? Or something else? Scroll down to the Motion Tracking Selection Guide below to view your best options.</p>
+  </div>
+  <div class="cross white cross-tl" data-spinner></div>
+  <div class="cross white cross-br" data-spinner></div>
+</section>
+<section class="filter">
+  <form class="controls">
+    <fieldset class="control-group" data-filter-group>
+      <label class="control-group-label"># of Tracking Points</label>
+      <button class="control points" data-toggle=".fastrack" type="button">1-2</button>
+      <button class="control points" data-toggle="._1" type="button">1-4</button>
+      <button class="control points" data-toggle="._4" type="button">5+</button>
+    </fieldset>
+    <fieldset class="control-group" data-filter-group>
+      <label class="control-group-label">Is Wireless Required?</label>
+      <button class="control wireless" data-toggle=".wireless-one" type="button"></button>
+      <button class="control wireless" data-toggle=".wireless-two" type="button"></button>
+      <button class="control wireless" data-toggle=".wireless-three" type="button"></button>
+    </fieldset>
+    <fieldset class="control-group" data-filter-group>
+      <label class="control-group-label">Data Speed</label>
+      <button class="control speed" data-toggle=".patriot" type="button"></button>
+      <button class="control speed" data-toggle=".patriot-wireless" type="button"></button>
+      <button class="control speed" data-toggle=".viper" type="button"></button>
+    </fieldset>
+    <fieldset class="control-group" data-filter-group>
+      <label class="control-group-label">Accuracy</label>
+      <button class="control accuracy" data-toggle="._1" type="button"></button>
+      <button class="control accuracy" data-toggle="._2" type="button"></button>
+      <button class="control accuracy" data-toggle="._3" type="button"></button>
+    </fieldset>
+    <fieldset class="control-group" data-filter-group>
+      <label class="control-group-label">Latency</label>
+      <button class="control latency" data-toggle="._4" type="button"></button>
+      <button class="control latency" data-toggle="._5" type="button"></button>
+      <button class="control latency" data-toggle="._6" type="button"></button>
+    </fieldset>
+    <fieldset class="control-group" data-filter-group>
+      <label class="control-group-label">Portability</label>
+      <button class="control portability" data-toggle="._7" type="button"></button>
+      <button class="control portability" data-toggle=".liberty-latus" type="button"></button>
+      <button class="control portability" data-toggle=".g4" type="button"></button>
+    </fieldset>
+  </form>
+  <div class="mix-container">
+{% line 44 %}    {% set count = 1 %}
+    {% for product in products %}
+      <div class="mix _{{  count  }} {{  product.title|kebab  }}">
+        <div class="mix-image">
+          {% if product.image %}
+            <figure>
+              {% set assets = product.image.eagerly().one() %}
+              {% if assets %}
+                <img src="{{ assets.url('medium') }}" alt="{{ assets.alt }}">
+              {% endif %}
+            </figure>
+          {% endif %}
+        </div>
+        <div class="mix-title">{% line 53 %}{{ product.title }}</div>
+        <div class="mix-details">
+          <div class="detail">
+            <div class="title">Points</div>
+          </div>
+          <div class="detail">
+            <div class="title">Accuracy</div>
+          </div>
+          <div class="detail">
+            <div class="title">Speed</div>
+          </div>
+          <div class="detail">
+            <div class="title">Latency</div>
+          </div>
+          <div class="detail">
+            <div class="title">Wireless</div>
+          </div>
+          <div class="detail">
+            <div class="title">Portability</div>
+          </div>
+        </div>
+      </div>
+{% line 67 %}      {% set count = count + 1 %}
+    {% endfor %}
+  </div>
+</section>
+<section class="cta">
+  <a class="button sm yellow" href="" target="">Talk to Sales</a>
+</section>
+<section class="promo">
+  <div class="promo-inner">
+    <div class="cross white cross-tr" data-spinner></div>
+    <div class="cross white cross-bl" data-spinner></div>
+    <h2 class="promo-title">Real-Time, Reliable Data. From The Motion Tracking Experts.</h2>
+    <div class="promo-content">
+      <p class="large">We offer a variety of motion tracking systems, and we continue to introduce new products, based on market demand. Whether you need to track a person, an object, or several people or objects, we can assist you in determining which tracking system will work best for you. We are the experts in motion tracking and motion capture. Polhemus has been delivering full 6DOF electromagnetic motion trackers for over 50 years.</p>
+    </div>
+  </div>
+</section>
+<section class="cta-border">
+  <a class="button sm yellow" href="" target="">Talk to Sales</a>
+</section>
+<section class="our-trackers">
+  <h2>Our Trackers</h2>
+  <h3>Reason to Believe</h3>
+  <p>We're experts in the field.. in fact, we made this product.</p>
+  <div class="trackers">
+    <div class="tracker-lt">
+{% line 90 %}      {% for product in products %}
+        {% if product.slug not in ['scout', 'liberty-latus'] %}
+          <div class="tracker {{  product.slug  }}">
+            {% if product.slug == 'viper' %}
+              {% if product.image2 %}
+                {% set assets = product.image2.eagerly().one() %}
+                {% if assets %}
+                  <img src="{{ assets.url('large') }}" alt="{{ assets.alt }}">
+                {% endif %}
+              {% endif %}
+{% line 98 %}            {% else %}
+              {% if product.image %}
+                {% set assets = product.image.eagerly().one() %}
+                {% if assets %}
+                  <img src="{{ assets.url('large') }}" alt="{{ assets.alt }}">
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="tracker-lt">
+{% line 104 %}      {% for product in products %}
+        {% if product.slug in ['scout', 'liberty-latus'] %}
+          <div class="tracker {{  product.slug  }}">
+            {% if product.image %}
+              {% set assets = product.image.eagerly().one() %}
+              {% if assets %}
+                <img src="{{ assets.url('xL') }}" alt="{{ assets.alt }}">
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

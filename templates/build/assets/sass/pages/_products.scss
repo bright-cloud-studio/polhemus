@@ -56,14 +56,11 @@
 
 				h2 {
 					color: $white;
-					text-transform: uppercase;
 					overflow-wrap: anywhere;
 					flex: 1;
 					max-width: 29.27vw;
 					margin-top: 0;
-					font-family: Anta, sans-serif;
 					font-size: 3.35vw;
-					font-weight: 400;
 					line-height: 1.1em;
 
 					.tricksword {
@@ -311,7 +308,6 @@
 				h2 {
 					color: $white;
 					@extend .oswald-lt;
-					text-transform: uppercase;
 					margin-top: 0;
 					margin-bottom: 0;
 					font-size: 2.5vw;
@@ -323,8 +319,6 @@
 					color: $white;
 					@extend .oswald-lt;
 					letter-spacing: 1px;
-					font-size: 1.05vw;
-					line-height: 1.4em;
 				}
 
 				&.bottom {
@@ -429,7 +423,7 @@
 
 					.feature-title {
 						width: 100%;
-						background: $dkgreen;
+						background: $green;
 						padding: 2.09vw 0 2.09vw 1.25vw;
 						border-left: 0.78vw solid #000;
 						position: relative;
@@ -444,13 +438,12 @@
 						h2 {
 							color: $white;
 							font-size: 4.6vw;
-							text-transform: uppercase;
 						}
 					}
 
 					.feature-copy {
-						border-top: 1px solid $dkgreen;
-						border-bottom: 1px solid $dkgreen;
+						border-top: 1px solid $green;
+						border-bottom: 1px solid $green;
 						width: 100%;
 						padding: 1.57vw 4.18vw 1.57vw 2.09vw;
 						position: relative;
@@ -461,8 +454,7 @@
 						}
 
 						p {
-							font-size: 1.045vw;
-							color: $dkgreen;
+							color: $green;
 						}
 					}
 				}
@@ -602,7 +594,7 @@
 
 					.feature-title {
 						width: 100%;
-						background: $dkgreen;
+						background: $green;
 						padding: 2.09vw 0 2.09vw 3.13vw;
 						border-right: 0.78vw solid #000;
 						position: relative;
@@ -617,13 +609,12 @@
 						h2 {
 							color: $white;
 							font-size: 4.6vw;
-							text-transform: uppercase;
 						}
 					}
 
 					.feature-copy {
-						border-top: 1px solid $dkgreen;
-						border-bottom: 1px solid $dkgreen;
+						border-top: 1px solid $green;
+						border-bottom: 1px solid $green;
 						width: 100%;
 						padding: 1.57vw 2.09vw 1.57vw 4.18vw;
 						position: relative;
@@ -634,8 +625,7 @@
 						}
 
 						p {
-							font-size: 1.045vw;
-							color: $dkgreen;
+							color: $green;
 						}
 					}
 				}
@@ -793,8 +783,6 @@
 				
 				p {
 					color: $white;
-					@extend .oswald-reg;
-					font-size: 1.04vw;
 					line-height: 1.2;
 					text-align: center;
 					width: 49.87vw;
@@ -811,6 +799,105 @@
 				}
 				.cross-bl {
 					inset: auto auto -21px 0;
+				}
+
+				.comparisons {
+					width: 69.78vw;
+					margin-top: 4.18vw;
+					
+					details {
+						background-color: $white;
+						border: 1px solid $white;
+						border-radius: 8px;
+						padding: 0.84vw;
+						margin-bottom: 0.84vw;
+						cursor: pointer;
+						transition: background-color .2s linear;
+						
+						summary {
+							color: $black;
+							@extend .oswald-bold;
+							font-size: 1.04vw;
+							line-height: 1.5;
+							transition: color .2s linear;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							
+							&:after {
+								display: block;
+								content: '';
+								-webkit-mask: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231E1E1E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+								mask: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231E1E1E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+								-webkit-mask-size: contain;
+								mask-size: contain;
+								width: 12px;
+								height: 8px;
+								background: $black;
+								transition: all .2s linear;
+							}
+						}
+						
+						.content {
+							overflow: hidden;
+							height: 0;
+							transition: height .2s linear;
+							
+							@media (prefers-reduced-motion: reduce) {
+								transition: none;
+							}
+							
+							.inner {
+								margin-top: 1.04vw;
+								
+								.brands {
+									background: $yellow;
+									display: flex;
+									justify-content: space-evenly;
+									padding: 1.25vw 1.25vw 0.42vw;
+									margin-bottom: 1.3;
+									border-bottom: 1px solid $yellow;
+									
+									.brand {
+										flex: 1;
+										color: $green;
+										@extend .oswald-semi;
+										font-size: 0.84vw;
+										line-height: 1;
+										text-transform: uppercase;
+									}
+								}
+								
+								.specs {
+									display: flex;
+									justify-content: space-evenly;
+									padding: 1.25vw 1.25vw 2.09vw;
+									
+									.spec {
+										flex: 1;
+										color: $white;
+										@extend .oswald-semi;
+										font-size: 0.84vw;
+										line-height: 1;
+									}
+								}
+							}
+						}
+						
+						&[open] {
+							border: 1px solid $yellow;
+							background-color: transparent;
+							
+							summary {
+								color: $white;
+								
+								&:after {
+									background: $white;
+									transform: rotateX(180deg);
+								}
+							}
+						}			
+					}
 				}
 			}
 		}

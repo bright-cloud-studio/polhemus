@@ -1,3 +1,181 @@
+{% set products = craft.entries().type('products').all() %}
 <div class="push"></div>
-<h1>{{ entry.title }}</h1>
+<h1>{% line 4 %}{{ entry.title }}</h1>
 <div class="push"></div>
+<section class="marquee" data-speed="90">
+  <div class="marquee__viewport" aria-live="off">
+    <ul class="marquee__track">
+      <li class="card" tabindex="0">
+        <div class="award">op Simulation Solution Provider</div>
+        <div class="source">MedTech Outlook Magazine 2023</div>
+      </li>
+      <li class="card" tabindex="0">
+        <div class="award">Wired for 3D Award</div>
+        <div class="source">3D Design Magazine</div>
+      </li>
+      <li class="card" tabindex="0">
+        <div class="award">Innovation Award</div>
+        <div class="source">Military Training Technology Magazine 2009</div>
+      </li>
+      <li class="card" tabindex="0">
+        <div class="award">NDES Show Stopper Award</div>
+        <div class="source">Cadence Magazine</div>
+      </li>
+      <li class="card" tabindex="0">
+        <div class="award">Editor's Choice Award</div>
+        <div class="source">Computer Graphics World</div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="ctas">
+  <div class="cta-border">
+    <a class="button sm yellow" href="" target="">Talk to Sales</a>
+  </div>
+  <div class="cta-border">
+    <a class="button md yellow" href="" target="">Talk to Sales</a>
+  </div>
+  <div class="cta-border">
+    <a class="button lg yellow" href="" target="">Talk to Sales</a>
+  </div>
+</section>
+<section class="features">
+  <div class="features-title">
+    <h2>Features Section</h2>
+    <div class="intro">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet  . Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget te</div>
+  </div>
+  <div class="feature-container odd">
+    <div class="feature-container-lt">
+      <div class="cross white cross-tr" data-spinner></div>
+      <div class="cross yellow cross-tl"></div>
+      <div class="cross white cross-bl" data-spinner></div>
+      <div class="cross yellow cross-br"></div>
+      <div class="feature-content">
+        <h2 data-anim="fade-left" data-distance="30" style="opacity:0">Feature category    </h2>
+        <h3 data-anim="fade-left" data-delay="250" data-distance="30" style="opacity:0">Feature 1</h3>
+      </div>
+      <div class="feature-content">
+        <div class="content" data-anim="fade-left" data-delay="500" data-distance="30" style="opacity:0">
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus.</p>
+        </div>
+      </div>
+      <div class="feature-content bottom">
+        <a class="button yellow w-button" href="" data-anim="fade-left" data-delay="750" data-distance="30" style="opacity:0">Learn More</a>
+        <a class="button green w-button" href="" data-anim="fade-left" data-delay="1000" data-distance="30" style="opacity:0">Talk to Sales</a>
+      </div>
+    </div>
+    <div class="feature-container-rt" data-anim="fade-right" style="opacity:0">
+      <div class="media">
+        <img src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/general_3.jpg?w=2000&h=1333&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760721452&s=f104a4fb6f340a227bfdabcd19fcbb5c" alt="">
+      </div>
+      <div class="side-container"></div>
+    </div>
+  </div>
+  <div class="feature-container even">
+    <div class="feature-container-lt" data-anim="fade-left" style="opacity:0">
+      <div class="side-container"></div>
+      <div class="media">
+        <img src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/general_2.jpg?w=1920&h=1080&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760721450&s=c05b753df3cfbf6add41a6b4be1a9812" alt="">
+      </div>
+    </div>
+    <div class="feature-container-rt">
+      <div class="cross white cross-tr" data-spinner></div>
+      <div class="cross yellow cross-tl"></div>
+      <div class="cross white cross-bl" data-spinner></div>
+      <div class="cross yellow cross-br"></div>
+      <div class="feature-content">
+        <h2 data-anim="fade-right" data-distance="30" style="opacity:0">Feature category  </h2>
+        <h3 data-anim="fade-right" data-delay="250" data-distance="30" style="opacity:0">Feature 2</h3>
+      </div>
+      <div class="feature-content">
+        <div class="content" data-anim="fade-right" data-delay="500" data-distance="30" style="opacity:0">
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus.</p>
+        </div>
+      </div>
+      <div class="feature-content bottom">
+        <a class="button yellow w-button" href="" data-anim="fade-right" data-delay="750" data-distance="30" style="opacity:0">Learn More</a>
+        <a class="button green w-button" href="" data-anim="fade-right" data-delay="1000" data-distance="30" style="opacity:0">Talk to Sales</a>
+      </div>
+    </div>
+  </div>
+  <div class="feature-container odd">
+    <div class="feature-container-lt">
+      <div class="cross white cross-tr" data-spinner></div>
+      <div class="cross yellow cross-tl"></div>
+      <div class="cross white cross-bl" data-spinner></div>
+      <div class="cross yellow cross-br"></div>
+      <div class="feature-content">
+        <h2 data-anim="fade-left" data-distance="30" style="opacity:0">Feature category  </h2>
+        <h3 data-anim="fade-left" data-delay="250" data-distance="30" style="opacity:0">Feature 3</h3>
+      </div>
+      <div class="feature-content">
+        <div class="content" data-anim="fade-left" data-delay="500" data-distance="30" style="opacity:0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+        </div>
+      </div>
+      <div class="feature-content bottom">
+        <a class="button yellow w-button" href="" data-anim="fade-left" data-delay="750" data-distance="30" style="opacity:0">Learn More</a>
+        <a class="button green w-button" href="" data-anim="fade-left" data-delay="1000" data-distance="30" style="opacity:0">Talk to Sales</a>
+      </div>
+    </div>
+    <div class="feature-container-rt" data-anim="fade-right" style="opacity:0">
+      <div class="media">
+        <img src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/general_1.jpg?w=1900&h=1264&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760721447&s=0e575c8781d41cec358a7c7d08d79b26" alt="">
+      </div>
+      <div class="side-container"></div>
+    </div>
+  </div>
+</section>
+<section class="our-trackers">
+  <h2>Our Trackers</h2>
+  <h3>Reason to Believe</h3>
+  <p>We're experts in the field.. in fact, we made this product.</p>
+  <div class="trackers">
+    <div class="tracker-lt">
+{% line 115 %}      {% for product in products %}
+        {% if product.slug not in ['scout', 'liberty-latus'] %}
+          <div class="tracker {{  product.slug  }}">
+            {% if product.slug == 'viper' %}
+              {% if product.image2 %}
+                {% set assets = product.image2.eagerly().one() %}
+                {% if assets %}
+                  <img src="{{ assets.url('large') }}" alt="{{ assets.alt }}">
+                {% endif %}
+              {% endif %}
+{% line 123 %}            {% else %}
+              {% if product.image %}
+                {% set assets = product.image.eagerly().one() %}
+                {% if assets %}
+                  <img src="{{ assets.url('large') }}" alt="{{ assets.alt }}">
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="tracker-lt">
+{% line 129 %}      {% for product in products %}
+        {% if product.slug in ['scout', 'liberty-latus'] %}
+          <div class="tracker {{  product.slug  }}">
+            {% if product.image %}
+              {% set assets = product.image.eagerly().one() %}
+              {% if assets %}
+                <img src="{{ assets.url('xL') }}" alt="{{ assets.alt }}">
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="blog">
+  <h2>Blog Feed</h2>
+  <div class="intro">
+    <p>Below is a sample of case studies relevant to the military market.</p>
+  </div>
+  <div class="cta">
+    <a class="button lg yellow" href="" target="">View all case studies</a>
+  </div>
+</section>

@@ -1,5 +1,238 @@
-.push
-%h1= entry.title
-.push
-- set form = entry.formChooser.one()
-= craft.formie.renderForm(form)
+%section.hero
+	-#%h1= entry.title
+	.cross.white.cross-tl(data-spinner)
+	%h1 Precision.<br />Reliability.<br />Value.
+	.intro 
+		%p Polhemus is the global leader in motion tracking technology. With tracking products for measuring small, precision movements, up to large area tracking, we deliver solutions for a wide range of exciting applications.
+		
+	.hero-image.center
+		%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-hero-1.jpg?w=2667&h=1200&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760538511&s=7d05db8206ee3d2f1ab0458a0841db7c" alt="")
+	.hero-image.tl
+		%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-hero-4.jpg?w=314&h=207&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760538517&s=ae58701db10763cf84f2724f2fb79ab9" alt="")
+	.hero-image.tr
+		%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-hero-3.jpg?w=600&h=400&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760538515&s=eaf9dea61ac264ff0b66dd284c8ba7c5" alt="")
+	.hero-image.br
+		%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-hero-2.jpg?w=548&h=449&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760538513&s=f09cf4f4df658f8c1e2b5b9db4342c6a" alt="")
+	.hero-image.bl
+		%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-hero-5.jpg?w=1920&h=1080&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760538519&s=5e16eae9ec52e9e132e4a36cfaa76b03" alt="")
+	
+	.hero-bottom
+	
+%section.team
+	.team-container
+		.team-content
+			%h2.team-title Our Team
+			.team-intro
+				%p We've been helping customers break new ground with best-in-class 6 Degree-Of-Freedom (6DOF) tracking systems, 3D laser scanning and eye tracking for more than 50 years. We continue to deliver the leading technology around the world, enabling the latest high-tech applications. We're proud to be called the experts in motion tracking.
+				%p Meet the dedicated professionals driving our innovation.
+			.cross.white.cross-tl(data-spinner)
+			.cross.yellow.cross-tr
+			.cross.white.cross-br(data-spinner)
+			.cross.yellow.cross-bl
+			
+		.team-members
+			.team-member(data-anim="fade-left")
+				.avatar
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/headshot1.png?w=480&h=460&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760546543&s=fe9fa78b699a8622e375d0f32d6ce978" alt="")	
+				.name Person 1
+				.about
+					.title CEO
+					.bio
+						%p.small Leading our vision with over 15 years of experience in technology and management.
+			.team-member(data-anim="fade-right")
+				.avatar
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/headshot2.png?w=480&h=460&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760546505&s=83fe5992cab747ed626d9b5e2062e280" alt="")	
+				.name Person 2
+				.about
+					.title CEO
+					.bio
+						%p.small  Leading our vision with over 15 years of experience in technology and management.
+			.team-member(data-anim="fade-left")
+				.avatar
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/headshot3.png?w=480&h=460&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760546514&s=f1b1aa7fda369826fd8ce478f3c7164b" alt="")	
+				.name Person 3
+				.about
+					.title CEO
+					.bio
+						%p.small  Leading our vision with over 15 years of experience in technology and management.
+			.team-member(data-anim="fade-right")
+				.avatar
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/headshot4.png?w=480&h=460&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760546534&s=218967d7389e55cc53d1f7ffc53b0866" alt="")	
+				.name Person 4
+				.about
+					.title CEO
+					.bio
+						%p.small  Leading our vision with over 15 years of experience in technology and management.
+						
+%section.cta
+	%a.button.sm.yellow(href="" target="") Talk to Sales
+	
+%section.awards
+	- set viperLg = craft.assets().id(275).eagerly().one()
+	- if viperLg
+		%img(src=viperLg.url('xL') alt=viperLg.alt data-anim="fade-up")
+		
+	.awards-container
+		.awards-content
+			%h2.awards-title Awards and Accolades
+			.awards-intro
+				%p Polhemus is proud to have won numerous awards for our 6DOF motion tracking products and 3D laser scanners. We set the standard in motion tracking over 50 years ago and our products have enabled new capabilities in the areas of he
+				%p Meet the dedicated professionals driving our innovation.
+			.cross.white.cross-tl(data-spinner)
+			.cross.yellow.cross-tr
+			.cross.white.cross-br(data-spinner)
+			.cross.yellow.cross-bl
+			
+		.awards-image(data-anim="fade-up")
+			%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/awards.png?w=1400&h=812&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760547633&s=36a473caea175a087f5f2080fd807870" alt="")
+	
+	.marquee(data-speed="90")
+		.marquee__viewport(aria-live="off")
+			%ul.marquee__track
+				%li.card(tabindex="0")
+					%img(src="https://pom-craft.files.svdcdn.com/local/media/media/Template/trophy.svg?dm=1760550396")
+					.award op Simulation Solution Provider
+					.source MedTech Outlook Magazine 2023
+				%li.card(tabindex="0")
+					%img(src="https://pom-craft.files.svdcdn.com/local/media/media/Template/banner.svg?dm=1760550394")
+					.award Wired for 3D Award
+					.source 3D Design Magazine
+				%li.card(tabindex="0")
+					%img(src="https://pom-craft.files.svdcdn.com/local/media/media/Template/award.svg?dm=1760550393")
+					.award Innovation Award
+					.source Military Training Technology Magazine 2009
+				%li.card(tabindex="0")
+					%img(src="https://pom-craft.files.svdcdn.com/local/media/media/Template/trophy.svg?dm=1760550396")
+					.award NDES Show Stopper Award
+					.source Cadence Magazine
+				%li.card(tabindex="0")
+					%img(src="https://pom-craft.files.svdcdn.com/local/media/media/Template/banner.svg?dm=1760550394")
+					.award Editor's Choice Award
+					.source Computer Graphics World
+					
+	%section.testimonials
+		%h2 what clients say
+		.slider(data-autoplay="true" data-infinite="true" data-arrows="false" data-fade="true")
+			.slide
+				%p Using Polhemus technology, NeuroScan was able to be the first in the industry to produce a three dimensional image of a subject's head and define the exact location of electrodes placed on the subject. "For the first time we can quickly take EEG data and overlay it on a MR image for an exact definition of where electrical activity is coming." Before using Polhemus solutions, this was a long and difficult process to accurately calculate this activity."
+				.name Stephen Sands, Chief Scientist, 
+				.title Compumedics Neuroscan
+			.slide
+				%p Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+			.slide
+				%p Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+			.slide
+				%p Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque. Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+				
+		.cta
+			%a.button.lg.yellow(href="" target="") Talk to Sales
+			
+		.stylus(data-anim="fade-left")
+			%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-stylus-fastrakST8.png?w=950&h=1079&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760559203&s=e4b38664f8b20c97d0120ff773b89d91" alt="")
+		
+		.g4(data-anim="fade-right")
+			%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-g4.png?w=1087&h=1163&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760559199&s=f96ee9a84cefc01393e6be62e4616bf5" alt="")
+			
+	%section.timeline
+		.timeline-container
+			%h2 Over 50 Years of Experience
+			.intro
+				%p Over 50 years later, we remain true to our mission:
+				%p Give our customers the power to break new ground through innovative, cost-effective enabling technologies for the real and virtual world.
+				
+		.timeline-wrapper
+			.event
+				.event-image(data-anim="fade-up")
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/timeline.png?w=1185&h=1184&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760625895&s=0bc78905720ef3f3a5888632c2f3d179" alt="")
+				.divider
+					.upper
+					.circle(data-anim="fade")
+					.lower
+				.event-date(data-anim="fade-up")
+					.date Today
+					.title Lorem ipsum dolor sit amet consectetu
+					.desc
+						%p Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. 
+			
+			.event
+				.event-date(data-anim="fade-up")
+					.date 2018
+					.title Expanded Global Reach
+					.desc
+						%p Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. 			
+					
+				.divider
+					.upper
+					.circle(data-anim="fade")
+					.lower
+				.event-image(data-anim="fade-up")
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/timeline.png?w=1185&h=1184&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760625895&s=0bc78905720ef3f3a5888632c2f3d179" alt="")
+				
+			.event
+				.event-image(data-anim="fade-up")
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/timeline.png?w=1185&h=1184&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760625895&s=0bc78905720ef3f3a5888632c2f3d179" alt="")
+				.divider
+					.upper
+					.circle(data-anim="fade")
+					.lower
+				.event-date(data-anim="fade-up")
+					.date 1990’s
+					.title Product Expansion
+					.desc
+						%p In the 1990’s, we built upon our reputable legacy of motion tracking and expanded our product line--successfully adding eye tracking and 3D laser scanning to our portfolio. These additions paved the way for entering new markets, and Polhemus became known more broadly as the trusted, reliable source for motion measurement tracking technology.		
+						%p With this expansion, Polhemus evolved and focused efforts in the Research and Technology, Health Care, and Military markets. Over the years, one thing has remained the same—an ability to innovate and produce new solutions in high-fidelity motion measurement tracking. 
+			
+			.event
+				.event-date(data-anim="fade-up")
+					.date 1969
+					.title Over 50 Years of Experience
+					.desc
+						%p Polhemus is known as the true pioneer and leader in the motion tracking industry, first introducing our proprietary electromagnetic technology in 1969. Although Polhemus motion tracking products are currently used in a broad range of applications, the initial product was developed for pilots, when we introduced head tracking for the military--which we still do today.			
+					
+				.divider
+					.upper
+					.circle(data-anim="fade")
+					.lower
+				.event-image(data-anim="fade-up")
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/timeline.png?w=1185&h=1184&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760625895&s=0bc78905720ef3f3a5888632c2f3d179" alt="")
+				
+		.timeline-bottom
+		
+	%section.blog
+		.subtitle Success Stories
+		%h2 Innovative Tracking Solutions
+		.intro
+			%p Explore our groundbreaking projects in motion tracking technology.
+		
+		.blog-container
+			.post(data-anim="fade-up")
+				.img-wrap
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-post-1.png?w=2625&h=1476&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760635401&s=390e7213bdfdd3cb64fc5e3960cc5ed6" alt ="")
+				.content
+					.content-lt
+						.title Robotic Surgery. The Future of Medicine?
+						.tags
+							%a.tag(href="") Healthcare
+							%a.tag(href="") Simulation
+							%a.tag(href="") Training Solutions
+							%a.tag(href="") Healthcare
+							%a.tag(href="") Simulation
+							%a.tag(href="") Training Solutions
+							%a.tag(href="") Healthcare
+							%a.tag(href="") Simulation
+							%a.tag(href="") Training Solutions
+					.content-rt
+						%p Robotic surgery is the next generation of minimally invasive surgery. This type of surgery involves a computer-controlled robot that assists surgeons during various procedures. Robotic-assisted surgery is commonly used to treat a wide variety of conditions because it’s been shown to incur less complications, minimal scarring, and a quicker recovery for the patient. Robotic surgery also allows for greater visualization, enhanced dexterity, and greater precision for the surgeon.
+			
+			.post(data-anim="fade-up")
+				.img-wrap
+					%img(src="https://pom-craft.transforms.svdcdn.com/local/media/media/Template/about-post-2.png?w=2625&h=1476&auto=compress%2Cformat%2Cavif&fit=crop&dm=1760635414&s=d0684556d4b1e6d55e1b8939b0b6b2e1" alt ="")
+				.content
+					.content-lt
+						.title Polhemus 3D Laser Scanner Aids in Recreating Vermont Capitol Building Statue
+						.tags
+							%a.tag(href="") Military
+							%a.tag(href="") Training
+							%a.tag(href="") Operational Readiness
+					.content-rt
+						%p The state capitol building in Montpelier, Vermont has long been known for its beautiful building, graced with a gilded dome and a 14-foot statue.

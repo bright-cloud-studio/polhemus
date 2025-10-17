@@ -1,3 +1,528 @@
-#general {
+.general {
+	
+	main {
+		background: linear-gradient(237deg, #000 -38.45%, #014B26 104.63%); //Adjust later
+	}
+	
+	h1 {
+		text-align: center;
+	}
+	
+	.marquee {
+		position: relative;
+		overflow: hidden;
+		border-top: 1px solid #ECA021;
+		border-bottom: 1px solid #ECA021;
+		background: rgba(0, 0, 0, 0.30);
+		padding: 3.35vw 0;
+	
+		.marquee__viewport {
+			overflow: hidden;
+			padding: 14px;
+		
+			.marquee__track {
+				display: flex;
+				align-items: center;
+				gap: 3.35vw;
+				will-change: transform;
+				animation: scroll linear infinite;
+				
+				.card {
+					flex: 0 0 auto;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					gap: 0.84vw;
+					width: clamp(160px, 18vw, 240px);
+					
+					img {
+						height: 100px;
+						width: auto;
+					}
+					
+					.award {
+						color: $yellow;
+						@extend .anta;
+						font-size: 1.36vw;
+						line-height: 1.1;
+						letter-spacing: -0.01em;
+						text-transform: uppercase;
+					}
+					
+					.source {
+						color: $white;
+						@extend .oswald-reg;
+						font-size: 0.94vw;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+			
+		/* Pause on hover or focus */
+		&:hover .marquee__track,
+		&:focus-within .marquee__track {
+			animation-play-state: paused;
+		}
+		
+		@media (prefers-reduced-motion: reduce) {
+			.marquee__track { animation: none; }
+		}
+	}
+	
+	
+	@keyframes scroll {
+		to {
+			transform: translateX(-100%);
+		}
+	}
+	
+	.ctas {
+		display: flex;
+		flex-direction: column;
+		gap: 4.18vw;
+		padding: 4.18vw 0;
+	}
+	
+	.cta {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5.23vw 0;
+	}
+	
+	.cta-border {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3.14vw 0;
+		border-top: 1px solid $yellow;
+		border-bottom: 1px solid $yellow;
+	}
+	
+	.features {
+		background: linear-gradient(61deg, #014B26 -15.5%, #000 97.46%);
+				
+		.features-title {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-top: 1px solid $yellow;
+			border-bottom: 1px solid $yellow;
+			padding: 6.27vw 0;
+			
+			h2 {
+				color: $yellow;
+				text-align: center;
+				background: $yellow;
+				background: linear-gradient(227deg, #F7D7A2 -49.99%, #ECA021 105.68%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-bottom: 1.25vw;
+			}
+			
+			.intro {
+				color: $white;
+				@extend .oswald-reg;
+				font-size: 1.05vw;
+				line-height: 1.5; 
+				text-align: center;
+				width: 40.14vw;
+			}
+		}
+			
+		.feature-container {
+			border-bottom: 1px solid $yellow;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			
+			&.odd {
+				overflow: visible;
+				
+				.feature-container-lt {
+					border-right: 1px solid $yellow;
+					flex-flow: column;
+					flex: 0 auto;
+					justify-content: center;
+					align-items: stretch;
+					width: 38vw;
+					height: 100%;
+					padding: 13.06vw 0;
+					display: flex;
+					position: relative;
+					
+					.cross {
+						z-index: 2;
+						
+						&-tl {
+							inset: 4% auto auto 42px;
+						}
+						
+						&-tr {
+							inset: 4% -21px auto auto;
+						}
+						
+						&-br {
+							inset: auto -21px 21px auto;
+						}
+						
+						&-bl {
+							inset: auto auto 21px 42px;
+						}
+					}
+			
+					.feature-content {
+						border-top: 1px solid $yellow;
+						display: flex;
+						align-items: flex-start;
+						flex-flow: column;
+						flex: 0 auto;
+						justify-content: flex-start;
+						padding: 1.05vw 2.09vw;
+			
+						h2 {
+							color: $yellow;	
+							@extend .oswald-semi;
+							font-size: 1.25vw;
+							line-height: 1.2;
+							margin: 0;
+						}
+						
+						h3 {
+							color: $white;
+							@extend .oswald-lt;
+							text-transform: uppercase;
+							margin-top: 0;
+							margin-bottom: 0;
+							font-size: 2.5vw;
+							line-height: 1.2em;
+							letter-spacing: 0;
+						}
+			
+						p {
+							color: $white;
+							@extend .oswald-lt;
+							letter-spacing: 1px;
+						}
+			
+						&.bottom {
+							text-transform: uppercase;
+							border-bottom: 1px solid $yellow;
+							flex-flow: row;
+			
+							.button {
+								color: $white;
+								line-height: inherit;
+								cursor: pointer;
+								border: 0;
+								border-radius: 0;
+								padding: 1.25vw;
+								text-decoration: none;
+								display: inline-block;
+								margin-top: 0.52vw;
+								margin-bottom: 0.52vw;
+								margin-left: 1.05vw;
+			
+								&.yellow {
+									background: $yellow;
+									background: linear-gradient(90deg, #eca021, #bd7b0d);
+									margin-left: 0;
+								}
+			
+								&.green {
+									background: $green;
+									background: linear-gradient(83deg, $green, rgba(0, 102, 51, 0.78) -2.17%, rgba(0, 204, 102, 0.78) 97.87%);
+								}
+							}
+						}
+					}
+				}
+				.feature-container-rt {
+					display: flex;
+					flex-direction: row;
+					flex: 0 auto;
+					justify-content: flex-start;
+					align-items: center;
+					width: 62vw;
+					overflow: hidden;
+				
+					.side-container {
+						background-color: $yellow;
+						flex-flow: row;
+						flex: 0 auto;
+						justify-content: space-between;
+						width: 7.84vw;
+						min-height: 39.2vw;
+						display: flex;
+					}
+					.media {
+						-webkit-tap-highlight-color: $black;
+						tap-highlight-color: $black;
+						height: 39.2vw;
+						position: relative;
+						flex: 1;
+						
+						img {
+							object-fit: cover;
+							object-position: center;
+							height: 100%;
+						}
+					}
+				}
+				
+			}
+			
+			&.even {
+				overflow: visible;
+				
+				.feature-container-lt {
+					display: flex;
+					flex-direction: row;
+					flex: 0 auto;
+					justify-content: flex-start;
+					align-items: center;
+					width: 62vw;
+					overflow: hidden;
+					
+					.side-container {
+						background: #00FFB4;
+						background: linear-gradient(318deg, #00FFB4 3.44%, #29856A 178.57%);
+						flex-flow: row;
+						flex: 0 auto;
+						justify-content: space-between;
+						width: 7.84vw;
+						min-height: 39.2vw;
+						display: flex;
+					}
+			
+					.media {
+						-webkit-tap-highlight-color: $black;
+						tap-highlight-color: $black;
+						height: 39.2vw;
+						position: relative;
+						flex: 1;
+						
+						img {
+							object-fit: cover;
+							object-position: center;
+							height: 100%;
+						}
+					}
+				}
+			
+				.feature-container-rt {
+					border-left: 1px solid $yellow;
+					flex-flow: column;
+					flex: 0 auto;
+					justify-content: center;
+					align-items: stretch;
+					width: 38vw;
+					height: 100%;
+					padding: 13.06vw 0;
+					display: flex;
+					position: relative;
+			
+					.feature-content {
+						border-top: 1px solid $yellow;
+						display: flex;
+						align-items: flex-start;
+						flex-flow: column;
+						flex: 0 auto;
+						justify-content: flex-start;
+						padding: 1.05vw 2.09vw;
+			
+						h2 {
+							color: $yellow;	
+							@extend .oswald-semi;
+							font-size: 1.25vw;
+							line-height: 1.2;
+							margin: 0;
+						}
+						
+						h3 {
+							color: $white;
+							@extend .oswald-lt;
+							text-transform: uppercase;
+							margin-top: 0;
+							margin-bottom: 0;
+							font-size: 2.5vw;
+							line-height: 1.2em;
+							letter-spacing: 0;
+						}
+			
+						p {
+							color: $white;
+							@extend .oswald-lt;
+							letter-spacing: 1px;
+						}
+			
+						&.bottom {
+							text-transform: uppercase;
+							border-bottom: 1px solid $yellow;
+							flex-flow: row;
+			
+							.button {
+								color: $white;
+								line-height: inherit;
+								cursor: pointer;
+								border: 0;
+								border-radius: 0;
+								padding: 1.25vw;
+								text-decoration: none;
+								display: inline-block;
+								margin-top: 0.52vw;
+								margin-bottom: 0.52vw;
+								margin-right: 1.05vw;
+			
+								&.yellow {
+									background: $yellow;
+									background: linear-gradient(90deg, #eca021, #bd7b0d);
+									margin-left: 0;
+								}
+			
+								&.green {
+									background: $green;
+									background: linear-gradient(83deg, $green, rgba(0, 102, 51, 0.78) -2.17%, rgba(0, 204, 102, 0.78) 97.87%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.our-trackers {
+		text-align: center;
+		padding: 12.55vw 0;
+		
+		h2 {
+			color: $yellow;
+			background: linear-gradient(227deg, #F7D7A2 -49.99%, #ECA021 105.68%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		
+		h3 {
+			color: $yellow;
+			text-align: center;
+			font-size: 6.27vw;
+			line-height: 1;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
+		}
+		
+		p {
+			color: $white;
+		}
+		
+		.trackers {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			
+			
+			.tracker-lt, .tracker-rt {
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+	
+				.tracker {
+					
+					
+					&.patriot {
+						order: 1;
+					}
+					&.viper {
+						order: 2;
+						height: 18.73vw;
+						
+						img {
+							height: 100%;
+							object-fit: cover;
+							object-position: 0 80%;
+						}
+					}
+					&.patriot-wireless {
+						order: 3;
+					}
+					&.fastrack {
+						order: 4;
+						height: 12.18vw;
+						
+						img {
+							height: 100%;
+							object-fit: contain;
+						}
+					}
+					&.g4 {
+						order: 5;
+						height: 12.44vw;
+						
+						img {
+							height: 100%;
+							object-fit: contain;
+						}
+					}
+					&.scout {
+						height: 34.85vw;
+						
+						img {
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+					&.liberty-latus {
+						height: 45.62vw;
+						
+						img {
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-top: 1px solid $yellow;
+		background: linear-gradient(215deg, #000 -2.13%, #014B26 90.68%);
+		padding-top: 9.4vw;
+		
+		h2 {
+			color: $yellow;
+			text-align: center;
+		}
+		.intro {
+			padding: 1.25vw 0;
+			
+			p {
+				color: $white;
+				text-align: center;
+			}
+		}
+		
+		.cta {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 3.14vw 0;
+			border-top: 1px solid $yellow;
+			border-bottom: 1px solid $yellow;
+			width: 100%;
+		}
+	}
 	
 }

@@ -6,7 +6,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 72px;
-		padding: 11.08vw 0 0;
+		padding: 11.08vw 0 17vw;
 		position: relative;
 		
 		img.bg {
@@ -42,6 +42,8 @@
 			gap: 1.83vw;
 			padding: 0 20px;
 			z-index: 2;
+			position: absolute;
+			bottom: -6.62vw;
 			
 			.image-wrapper {
 				width: 31.36vw;
